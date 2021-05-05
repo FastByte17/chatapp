@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101847856355",
+    "project_id": "android-chat-82f38",
+    "storage_bucket": "android-chat-82f38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101847856355:android:5dcfd2cd9681c8c8cf41d6",
+        "android_client_info": {
+          "package_name": "com.nabeel.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101847856355-m0e56p2qdi6a6dlmn1i0n2sj9ubi01ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx2COudh_TTQ-RuX98nI-qND-SeTRqZ5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101847856355-m0e56p2qdi6a6dlmn1i0n2sj9ubi01ba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
