@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private val TAG: String = MainActivity::class.java.name
     private lateinit var auth: FirebaseAuth
     private var currentUser: FirebaseUser? = null
-    private lateinit var messages: ArrayList<String>
+    private lateinit var messages: ArrayList<Message>
     private lateinit var database: DatabaseReference
     private lateinit var edMessage: EditText
     private lateinit var rcMessageList: RecyclerView
