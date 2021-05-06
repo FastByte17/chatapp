@@ -1,6 +1,7 @@
 package com.nabeel.chatapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
@@ -106,7 +107,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSettings() {
-        TODO("Not yet implemented")
+        val intent = Intent(this, Settings::class.java).apply {
+            putExtra("currentUser", currentUser)
+        }
+        startActivity(intent)
     }
 
     private fun loginDialog() {
