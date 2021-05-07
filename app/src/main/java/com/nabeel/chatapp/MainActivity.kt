@@ -61,14 +61,13 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value != null) {
                     val messagesFromFirebase =
-                        (snapshot.value as HashMap<String, ArrayList<String>>).get("messages")
+                        (snapshot.value as ArrayList<HashMap<String, String>>)
                     messages.clear()
 
                     if (messagesFromFirebase != null) {
-                        for (i in 0..messagesFromFirebase.size - 1) {
-                            if (messagesFromFirebase.get(i) != null) {
-                                val message: Message =
-                                    Message.from(messagesFromFirebase.get(i) as HashMap<String, String>)
+                        for (i in messagesFromFirebase) {
+                            if ( i != null ) {
+                                val message: Message = Message.from(i)
                                 messages.add(message)
                             }
                         }
@@ -83,15 +82,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        database.addValueEventListener(messageListener)
+        database.child("messages").addValueEventListener(messageListener)
         rcMessageList.layoutManager = LinearLayoutManager(this)
         rcMessageList.adapter = MyAdapter(messages)
 
-        //Write message to the database.
-        val database = Firebase.database
-        val myRef = database.getReference("message")
 
-        myRef.setValue("Hello World!")
     }
 
     override fun onStart() {
